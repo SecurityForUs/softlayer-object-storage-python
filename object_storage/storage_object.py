@@ -227,7 +227,7 @@ class StorageObject:
 
         if size > 0:
 	    if not offset:
-		_rage = 'bytes=-%d' % (size - 1)
+		_range = 'bytes=-%d' % (size - 1)
 	    else:
 		_range = 'bytes=%d-%d' % (offset, (offset + size) - 1)
 	else:
