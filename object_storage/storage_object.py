@@ -226,14 +226,14 @@ class StorageObject:
 	_range = None
 
         if size > 0:
-	    if not offset:
-		_range = 'bytes=-%d' % (size - 1)
-	    else:
-		_range = 'bytes=%d-%d' % (offset, (offset + size) - 1)
-	else:
-	    _range = 'bytes=%d-' % (offset)
+            if not offset:
+                _range = 'bytes=-%d' % (size - 1)
+            else:
+                _range = 'bytes=%d-%d' % (offset, (offset + size) - 1)
+        else:
+            _range = 'bytes=%d-' % (offset)
 
-	if _range:
+        if _range:
             headers['Range'] = _range
 
         def _formatter(res):
