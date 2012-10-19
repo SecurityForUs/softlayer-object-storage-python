@@ -223,7 +223,7 @@ class StorageObject:
         """
         headers = headers or {}
 
-	_range = None
+        _range = None
 
         if size > 0:
             if not offset:
